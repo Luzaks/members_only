@@ -2344,3 +2344,479 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 138ms (Views: 123.8ms | ActiveRecord: 0.5ms | Allocations: 9489)
 
 
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:21:37 -0600
+  [1m[35m (18.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 106.6ms | Allocations: 3226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 2144.9ms | Allocations: 84344)
+  Rendered layouts/_shim.html.erb (Duration: 7.3ms | Allocations: 90)
+Completed 500 Internal Server Error in 2417ms (ActiveRecord: 1.7ms | Allocations: 101286)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/config
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/images
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/javascripts
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/stylesheets
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actioncable-6.0.2.1/app/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activestorage-6.0.2.1/app/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionview-6.0.2.1/lib/assets/compiled
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/mcastorena0316/Desktop/Microverse2/members_only/node_modules
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+    3:   <head>
+    4:     <%= render 'layouts/rails_default' %>
+    5:     <%= render 'layouts/shim' %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:     <!--[if lt IE 9]>
+    8:       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    9:       </script>
+  
+app/assets/javascripts/application.js:1
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:24:02 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1044)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 53.7ms | Allocations: 7761)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms | Allocations: 14747)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/config
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/images
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/javascripts
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/stylesheets
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actioncable-6.0.2.1/app/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activestorage-6.0.2.1/app/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionview-6.0.2.1/lib/assets/compiled
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/mcastorena0316/Desktop/Microverse2/members_only/node_modules
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+    3:   <head>
+    4:     <%= render 'layouts/rails_default' %>
+    5:     <%= render 'layouts/shim' %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:     <!--[if lt IE 9]>
+    8:       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    9:       </script>
+  
+app/assets/javascripts/application.js:1
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:24:14 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 59.4ms | Allocations: 7690)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms | Allocations: 14617)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/config
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/images
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/javascripts
+  /home/mcastorena0316/Desktop/Microverse2/members_only/app/assets/stylesheets
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actioncable-6.0.2.1/app/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activestorage-6.0.2.1/app/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionview-6.0.2.1/lib/assets/compiled
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/mcastorena0316/Desktop/Microverse2/members_only/node_modules
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/stylesheets
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/javascripts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/fonts
+  /home/mcastorena0316/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/bootstrap-sass-3.4.1/assets/images):
+    3:   <head>
+    4:     <%= render 'layouts/rails_default' %>
+    5:     <%= render 'layouts/shim' %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:     <!--[if lt IE 9]>
+    8:       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    9:       </script>
+  
+app/assets/javascripts/application.js:1
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:24:56 -0600
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 3226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 1450.2ms | Allocations: 99417)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 90)
+Completed 500 Internal Server Error in 2285ms (ActiveRecord: 2.5ms | Allocations: 162912)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+and restart your server):
+    3:   <head>
+    4:     <%= render 'layouts/rails_default' %>
+    5:     <%= render 'layouts/shim' %>
+    6:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    7:     <!--[if lt IE 9]>
+    8:       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    9:       </script>
+  
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:26:04 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 3227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 247.0ms | Allocations: 32011)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 53.4ms | Allocations: 3521)
+Completed 500 Internal Server Error in 473ms (ActiveRecord: 6.1ms | Allocations: 49902)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:26:08 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1023)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 48.5ms | Allocations: 7815)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 1014)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms | Allocations: 13069)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <header class="navbar navbar-fixed-top navbar-dark bg-primary">
+  <div class="container">
+    <%= link_to "members only", "#", class= "header-info" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right ">
+        <li><%= link_to "Home", "#" %></li>
+        <li><%= link_to "Log in", login_path %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+):
+1:    <header class="navbar navbar-fixed-top navbar-dark bg-primary">
+2:      <div class="container">
+3:        <%= link_to "members only", "#", class= "header-info" %>
+4:        <nav>
+5:          <ul class="nav navbar-nav navbar-right ">
+6:            <li><%= link_to "Home", "#" %></li>
+7:            <li><%= link_to "Log in", login_path %></li>
+8:          </ul>
+9:        </nav>
+10:      </div>
+11:    </header>
+  
+app/views/layouts/_header.html.erb:3: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:3: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:3: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:3: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:3: syntax error, unexpected '='
+app/views/layouts/_header.html.erb:3: syntax error, unexpected '='
+app/views/layouts/application.html.erb:13
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:27:15 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 32.6ms | Allocations: 7978)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 217)
+Completed 200 OK in 75ms (Views: 70.3ms | ActiveRecord: 0.0ms | Allocations: 14483)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:30:58 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1285)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 66.4ms | Allocations: 7953)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 87)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 214)
+Completed 200 OK in 102ms (Views: 99.9ms | ActiveRecord: 0.0ms | Allocations: 14284)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:31:15 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1286)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 30.6ms | Allocations: 7953)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 205)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.0ms | Allocations: 14249)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:31:33 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1285)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 32.7ms | Allocations: 7952)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 205)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 14191)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:38:05 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1286)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 1031.1ms | Allocations: 63140)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 205)
+Completed 200 OK in 1084ms (Views: 1080.8ms | ActiveRecord: 0.0ms | Allocations: 69400)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:38:28 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 1199.1ms | Allocations: 63195)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 61)
+Completed 200 OK in 1225ms (Views: 1223.2ms | ActiveRecord: 0.0ms | Allocations: 67609)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-01-18 17:39:36 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 39.3ms | Allocations: 704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 41.2ms | Allocations: 7713)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 61)
+Completed 200 OK in 114ms (Views: 106.3ms | ActiveRecord: 0.0ms | Allocations: 12236)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:41:40 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 39.4ms | Allocations: 7890)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 205)
+Completed 200 OK in 80ms (Views: 75.5ms | ActiveRecord: 0.0ms | Allocations: 14162)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:42:39 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1298)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 28.8ms | Allocations: 7889)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 205)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms | Allocations: 14167)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-01-18 17:42:42 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 685)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 32.7ms | Allocations: 7752)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 61)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 12380)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-01-18 17:42:54 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 32.9ms | Allocations: 7695)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 75)
+Completed 200 OK in 94ms (Views: 45.1ms | ActiveRecord: 7.5ms | Allocations: 14063)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-01-18 17:43:04 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 29.1ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.3ms | Allocations: 11668)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-18 17:43:24 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 34.9ms | Allocations: 7750)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 61)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.0ms | Allocations: 12153)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-01-18 17:43:59 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 31.0ms | Allocations: 7890)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 214)
+Completed 200 OK in 67ms (Views: 60.0ms | ActiveRecord: 0.3ms | Allocations: 13504)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-01-18 17:44:01 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 46.6ms | Allocations: 7754)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 70)
+Completed 200 OK in 78ms (Views: 71.5ms | ActiveRecord: 0.5ms | Allocations: 11694)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-01-18 17:44:27 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 31.7ms | Allocations: 7891)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 214)
+Completed 200 OK in 66ms (Views: 58.9ms | ActiveRecord: 0.2ms | Allocations: 13594)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-01-18 17:46:05 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 35.8ms | Allocations: 7893)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 214)
+Completed 200 OK in 70ms (Views: 63.0ms | ActiveRecord: 0.2ms | Allocations: 13518)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:49:35 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 41.3ms | Allocations: 7889)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 211)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.0ms | Allocations: 14178)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:49:36 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 33.1ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 68)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.0ms | Allocations: 12164)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:49:37 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 40.3ms | Allocations: 7770)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 68)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms | Allocations: 12169)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:49:39 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 33.5ms | Allocations: 7750)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 68)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms | Allocations: 12155)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-01-18 17:49:43 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 679)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 62.6ms | Allocations: 7752)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 69)
+Completed 200 OK in 83ms (Views: 79.6ms | ActiveRecord: 0.0ms | Allocations: 12438)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-18 17:49:44 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 48.1ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 70)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms | Allocations: 12168)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-01-18 17:49:45 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 42.7ms | Allocations: 7750)
+  Rendered layouts/_shim.html.erb (Duration: 2.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 68)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.0ms | Allocations: 11577)
+
+
