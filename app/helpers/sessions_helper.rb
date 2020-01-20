@@ -1,5 +1,4 @@
 module SessionsHelper
-
   def sign_in(user)
     session[:user_id] = user.id
     remember_token = User.new_token
@@ -11,7 +10,7 @@ module SessionsHelper
   def current_user
     @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
-  
+
   def logged_in?
     !current_user.nil?
   end
@@ -20,5 +19,4 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
-  
 end
