@@ -1,0 +1,15 @@
+<% provide(:title, "Comments") %>
+<h1>Comment</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <% @posts.each do |p|%>
+    <ul>
+    <li> Comment: <%= p.body %>,  </li>
+    <% if logged_in? %>
+    <%= User.find_by(id: p.user_id).name  %>
+    <% end %>
+    </ul>
+    <% end%>
+  </div>
+</div>

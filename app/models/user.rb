@@ -26,7 +26,7 @@ class User < ApplicationRecord
 
   private
 
-  def remember_t(remember_token)
+  def remember_t
     self.remember_token = User.digest(User.new_token)
   end
 
