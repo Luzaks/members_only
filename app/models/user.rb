@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 
+  has_many :posts
   before_create :remember_t
   has_secure_password
 
