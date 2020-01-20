@@ -3776,3 +3776,903 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms | Allocations: 12260)
 
 
+Started GET "/" for ::1 at 2020-01-20 10:29:10 -0600
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 129.1ms | Allocations: 3226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 3156.6ms | Allocations: 156345)
+  Rendered layouts/_shim.html.erb (Duration: 15.7ms | Allocations: 90)
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 33.4ms | Allocations: 1492)
+Completed 200 OK in 3830ms (Views: 3698.1ms | ActiveRecord: 11.7ms | Allocations: 190588)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 10:29:39 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i2lepLXOm1VOHX07VWVw7mYRAzRsKRALWJh0oPzTV11lt7wANxE9VCdlcE2OhDlKayezc2lOQVnTNPaZ46yRBg=="}
+Completed 500 Internal Server Error in 1018ms (ActiveRecord: 0.0ms | Allocations: 114981)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<SessionsController:0x000055665ab8e1b8>
+Did you mean?  user_url):
+  
+app/controllers/application_controller.rb:14:in `current_user'
+app/helpers/sessions_helper.rb:9:in `logged_in?'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started DELETE "/logout" for ::1 at 2020-01-20 10:31:48 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i2lepLXOm1VOHX07VWVw7mYRAzRsKRALWJh0oPzTV11lt7wANxE9VCdlcE2OhDlKayezc2lOQVnTNPaZ46yRBg=="}
+Completed 500 Internal Server Error in 1026ms (ActiveRecord: 0.0ms | Allocations: 115521)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<SessionsController:0x00007fc39561ca50>
+Did you mean?  user_url):
+  
+app/controllers/application_controller.rb:14:in `current_user'
+app/controllers/application_controller.rb:24:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started GET "/login" for ::1 at 2020-01-20 10:32:01 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 134.0ms | Allocations: 7775)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 98.1ms | Allocations: 5595)
+Completed 200 OK in 318ms (Views: 304.8ms | ActiveRecord: 10.2ms | Allocations: 18246)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 10:32:08 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"i2lepLXOm1VOHX07VWVw7mYRAzRsKRALWJh0oPzTV11lt7wANxE9VCdlcE2OhDlKayezc2lOQVnTNPaZ46yRBg=="}
+Completed 500 Internal Server Error in 1171ms (ActiveRecord: 0.0ms | Allocations: 114994)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<SessionsController:0x00007fc394f71ac0>
+Did you mean?  user_url):
+  
+app/controllers/application_controller.rb:14:in `current_user'
+app/controllers/application_controller.rb:24:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started GET "/signin" for ::1 at 2020-01-20 10:32:25 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/signin"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/login" for ::1 at 2020-01-20 10:32:32 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 146.6ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.1ms | Allocations: 715)
+Completed 200 OK in 193ms (Views: 184.2ms | ActiveRecord: 3.0ms | Allocations: 12484)
+
+
+Started POST "/login" for ::1 at 2020-01-20 10:32:48 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"qDrFuPNqtfSQy7XAbhyCepPX10i8GOu0fbpAPtkSxPVG5CcccbUT9fmzuLa1/cvenuFnD7l/uub2FsIHxm0Crg==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 430)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 27.9ms | Allocations: 7742)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 714)
+Completed 200 OK in 825ms (Views: 48.1ms | ActiveRecord: 1.4ms | Allocations: 13199)
+
+
+Started POST "/login" for ::1 at 2020-01-20 10:33:18 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"jxoKZ8S1LhDHp+fuaVHbzXKwF0eBqzSB8ypphLJphKVhxOjDRmqIEa7f6piysJJpf4anAITMZdN4huu9rRZC/g==", "session"=>{"email"=>"mcastorena0316@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mcastorena0316@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "1d67331891d564829fdfb8cbd53ad3229e82b72a"], ["updated_at", "2020-01-20 16:33:18.990486"], ["id", 2]]
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[35m (23.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 918ms (ActiveRecord: 24.2ms | Allocations: 4441)
+
+
+Started GET "/users/2" for ::1 at 2020-01-20 10:33:19 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 20.3ms | Allocations: 152)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 38.2ms | Allocations: 7715)
+  Rendered layouts/_shim.html.erb (Duration: 1.2ms | Allocations: 5)
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 29.4ms | Allocations: 735)
+Completed 200 OK in 129ms (Views: 106.7ms | ActiveRecord: 5.0ms | Allocations: 13251)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 10:33:26 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EvAoa5AzJmaF/P1sB+PINKqoGc37dqZr3yvApkPyi9/8LsrPEuyAZ+yE8BrcAoGQp56piv4R9zlUh0KfXI1NhA=="}
+Completed 500 Internal Server Error in 985ms (ActiveRecord: 0.0ms | Allocations: 114993)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<SessionsController:0x00007fc395381bd8>
+Did you mean?  user_url):
+  
+app/controllers/application_controller.rb:14:in `current_user'
+app/controllers/application_controller.rb:24:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started DELETE "/logout" for ::1 at 2020-01-20 10:35:20 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EvAoa5AzJmaF/P1sB+PINKqoGc37dqZr3yvApkPyi9/8LsrPEuyAZ+yE8BrcAoGQp56piv4R9zlUh0KfXI1NhA=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 3.9ms | Allocations: 8146)
+
+
+  
+NoMethodError (undefined method `forget' for #<User:0x00007fc394d165a0>):
+  
+app/controllers/application_controller.rb:14:in `forget'
+app/controllers/application_controller.rb:20:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started DELETE "/logout" for ::1 at 2020-01-20 10:37:51 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EvAoa5AzJmaF/P1sB+PINKqoGc37dqZr3yvApkPyi9/8LsrPEuyAZ+yE8BrcAoGQp56piv4R9zlUh0KfXI1NhA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+Completed 500 Internal Server Error in 526ms (ActiveRecord: 5.2ms | Allocations: 64566)
+
+
+  
+NoMethodError (undefined method `forget' for #<SessionsController:0x00007fc3950390e8>
+Did you mean?  forgett
+               format):
+  
+app/controllers/application_controller.rb:20:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started DELETE "/logout" for ::1 at 2020-01-20 10:38:10 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EvAoa5AzJmaF/P1sB+PINKqoGc37dqZr3yvApkPyi9/8LsrPEuyAZ+yE8BrcAoGQp56piv4R9zlUh0KfXI1NhA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 7.6ms | Allocations: 8150)
+
+
+  
+NoMethodError (undefined method `forget' for #<User:0x0000556659b2c9c8>):
+  
+app/controllers/application_controller.rb:14:in `forgett'
+app/controllers/application_controller.rb:20:in `log_out'
+app/controllers/sessions_controller.rb:18:in `destroy'
+Started DELETE "/logout" for ::1 at 2020-01-20 10:39:07 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EvAoa5AzJmaF/P1sB+PINKqoGc37dqZr3yvApkPyi9/8LsrPEuyAZ+yE8BrcAoGQp56piv4R9zlUh0KfXI1NhA=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", nil], ["updated_at", "2020-01-20 16:39:08.099295"], ["id", 2]]
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[35m (31.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 142ms (ActiveRecord: 41.4ms | Allocations: 9485)
+
+
+Started GET "/" for ::1 at 2020-01-20 10:39:08 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 44.7ms | Allocations: 7906)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 82)
+Completed 200 OK in 78ms (Views: 74.8ms | ActiveRecord: 0.0ms | Allocations: 12801)
+
+
+Started GET "/login" for ::1 at 2020-01-20 10:41:53 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 442)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 77.6ms | Allocations: 7752)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 81)
+Completed 200 OK in 120ms (Views: 107.2ms | ActiveRecord: 0.0ms | Allocations: 11986)
+
+
+Started POST "/login" for ::1 at 2020-01-20 10:42:05 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"G6yl5rZyDZwJgIc6MXs2gOUiZhtWif41PLHw31wSnMv4GdwaOdy8Rx0PiWe31JzZLsh3O4iz3ppFwgPQr5cF8A==", "session"=>{"email"=>"mcastorena0316@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mcastorena0316@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "da1bb90444d5e1e756785d84e9696c97119014d6"], ["updated_at", "2020-01-20 16:42:06.599982"], ["id", 2]]
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[35m (25.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 849ms (ActiveRecord: 27.7ms | Allocations: 4372)
+
+
+Started GET "/users/2" for ::1 at 2020-01-20 10:42:06 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 50.8ms | Allocations: 7907)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 10.4ms | Allocations: 727)
+Completed 200 OK in 93ms (Views: 83.7ms | ActiveRecord: 1.0ms | Allocations: 12843)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 10:42:13 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sW6RJ/iiZUrsa2ztXdYAGa5k+aNY3odooLF4wwOEikNfsHODen3DS4UTYZuGN0m9o1JJ5F251jorHfr6HPtMGA=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", nil], ["updated_at", "2020-01-20 16:42:13.991860"], ["id", 2]]
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[35m (42.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 75ms (ActiveRecord: 43.9ms | Allocations: 4110)
+
+
+Started GET "/" for ::1 at 2020-01-20 10:42:14 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 89.4ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 78)
+Completed 200 OK in 131ms (Views: 127.8ms | ActiveRecord: 0.0ms | Allocations: 12564)
+
+
+Started GET "/login" for ::1 at 2020-01-20 10:42:42 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 51.0ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 78)
+Completed 200 OK in 101ms (Views: 98.2ms | ActiveRecord: 0.0ms | Allocations: 11832)
+
+
+Started GET "/login" for ::1 at 2020-01-20 10:42:43 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 66.2ms | Allocations: 7750)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 78)
+Completed 200 OK in 86ms (Views: 83.0ms | ActiveRecord: 0.0ms | Allocations: 11824)
+
+
+Started POST "/login" for ::1 at 2020-01-20 10:42:58 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"N8qLh+J7xoqPTDLa3dv4WJwTpTtelILLY/NHJlDw5b3Uf/J7bdV3UZvDPIdbdFIBV/m0G4CuomQagLQpo3V8hg==", "session"=>{"email"=>"kanemekanik@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kanemekanik@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "92afca44528924b213155385fbc9d799d8db96b8"], ["updated_at", "2020-01-20 16:42:59.615096"], ["id", 3]]
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[35m (24.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 1054ms (ActiveRecord: 26.0ms | Allocations: 4204)
+
+
+Started GET "/users/3" for ::1 at 2020-01-20 10:42:59 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 13)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 60.9ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.2ms | Allocations: 724)
+Completed 200 OK in 103ms (Views: 89.3ms | ActiveRecord: 0.8ms | Allocations: 12573)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 10:43:07 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NW4SwCLVM044zjeptN+t9ttEn2iqF4lJfngfdMOE+vjbsPBkoAqVT1G2Ot9vPuRS1nIvL69w2Bv11J1N3Ps8ow=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", nil], ["updated_at", "2020-01-20 16:43:07.971810"], ["id", 3]]
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[35m (120.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 188ms (ActiveRecord: 122.5ms | Allocations: 4199)
+
+
+Started GET "/" for ::1 at 2020-01-20 10:43:08 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 137.4ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 78)
+Completed 200 OK in 193ms (Views: 187.7ms | ActiveRecord: 0.0ms | Allocations: 12419)
+
+
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/login" for ::1 at 2020-01-20 10:43:46 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 35.6ms | Allocations: 7750)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 78)
+Completed 200 OK in 57ms (Views: 52.3ms | ActiveRecord: 0.0ms | Allocations: 11822)
+
+
+Started POST "/login" for ::1 at 2020-01-20 10:43:53 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3VwIhhlDq8NqwmEuec+7IeeQZ5pBGLkZo66iLB69xsI+6XF6lu0aGH5Nb3P/YBF4LHp2up8imbba3VEj7Thf+Q==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[36mUser Update (6.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "86ffd33c6b26a6cc08364a0c1b2bb1232565dd6b"], ["updated_at", "2020-01-20 16:43:54.096020"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[35m (37.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 896ms (ActiveRecord: 44.0ms | Allocations: 4230)
+
+
+Started GET "/users/1" for ::1 at 2020-01-20 10:43:54 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 13)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 30.7ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.7ms | Allocations: 724)
+Completed 200 OK in 56ms (Views: 50.5ms | ActiveRecord: 0.6ms | Allocations: 12575)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 10:44:05 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LxMMM7UF4O3VZAh5+3IDVV0Wh8aeNHyS1kAVBK7N0jnBze6XN9pG7LwcBQ8gk0rxUCA3gZtTLcBd7Jc9sbIUYg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:4:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[36mUser Update (7.9ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", nil], ["updated_at", "2020-01-20 16:44:05.778522"], ["id", 1]]
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[35m (31.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 39.8ms | Allocations: 4111)
+
+
+Started GET "/" for ::1 at 2020-01-20 10:44:05 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 24.2ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 53.3ms | Allocations: 7750)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 78)
+Completed 200 OK in 136ms (Views: 134.3ms | ActiveRecord: 0.0ms | Allocations: 12413)
+
+
+Started GET "/" for ::1 at 2020-01-20 10:49:24 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1068)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 29.3ms | Allocations: 7713)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 82)
+Completed 200 OK in 89ms (Views: 54.5ms | ActiveRecord: 0.0ms | Allocations: 17291)
+
+
+Started GET "/login" for ::1 at 2020-01-20 10:49:34 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 58.6ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 81)
+Completed 200 OK in 115ms (Views: 110.1ms | ActiveRecord: 0.0ms | Allocations: 11985)
+
+
+Started POST "/login" for ::1 at 2020-01-20 10:49:47 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"14p5fR++OpCFnic+V21LdCbob8+TRRKjR1AJGYoHbI00PwCBkBCLS5ERKWPRwuEt7QJ+701/Mgw+I/oWeYL1tg==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (36.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "7cd4781064cf6d1ec70b9c4004dd910e0d25217b"], ["updated_at", "2020-01-20 16:49:48.272781"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[35m (18.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+Completed 500 Internal Server Error in 1562ms (ActiveRecord: 58.0ms | Allocations: 62753)
+
+
+  
+NoMethodError (undefined method `current_user=' for #<SessionsController:0x00007fc3954631c8>
+Did you mean?  current_user):
+  
+app/controllers/application_controller.rb:10:in `sign_in'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-01-20 10:52:03 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t+cIs4YAxCOOMZ1mHvykXTeT0A9B6SpIHB1oTrs05UNZOeoXBN9iIudJkBDFHe35OqVgSESOexqXsep3pEsjGA==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[36mUser Update (3.9ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "6b5ae55a555bde72016e5262b36f1ca993cd4961"], ["updated_at", "2020-01-20 16:52:04.748636"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[35m (41.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+Completed 500 Internal Server Error in 1727ms (ActiveRecord: 48.8ms | Allocations: 124217)
+
+
+  
+NameError (undefined local variable or method `user' for #<SessionsController:0x00007fc394e342e8>
+Did you mean?  super):
+  
+app/helpers/sessions_helper.rb:7:in `assign_current'
+app/controllers/application_controller.rb:10:in `sign_in'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-01-20 10:53:03 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t+cIs4YAxCOOMZ1mHvykXTeT0A9B6SpIHB1oTrs05UNZOeoXBN9iIudJkBDFHe35OqVgSESOexqXsep3pEsjGA==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (13.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "007c4a2d576c9b6b74b763f9ebd263612a1b0c73"], ["updated_at", "2020-01-20 16:53:04.979753"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+  [1m[35m (29.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `sign_in'
+Completed 500 Internal Server Error in 2022ms (ActiveRecord: 57.8ms | Allocations: 124198)
+
+
+  
+NameError (undefined local variable or method `user' for #<SessionsController:0x00007fc3952562b8>
+Did you mean?  super):
+  
+app/helpers/sessions_helper.rb:7:in `assign_current'
+app/controllers/application_controller.rb:10:in `sign_in'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-01-20 10:54:07 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t+cIs4YAxCOOMZ1mHvykXTeT0A9B6SpIHB1oTrs05UNZOeoXBN9iIudJkBDFHe35OqVgSESOexqXsep3pEsjGA==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "3759568e87506f434bdf71f6ea5f1d0951a737d2"], ["updated_at", "2020-01-20 16:54:08.529105"], ["id", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[35m (37.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+Completed 500 Internal Server Error in 1666ms (ActiveRecord: 42.3ms | Allocations: 124200)
+
+
+  
+NameError (undefined local variable or method `user' for #<SessionsController:0x000055665ad4a7b8>
+Did you mean?  super):
+  
+app/helpers/sessions_helper.rb:16:in `assign_current'
+app/helpers/sessions_helper.rb:8:in `sign_in'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-01-20 10:54:47 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t+cIs4YAxCOOMZ1mHvykXTeT0A9B6SpIHB1oTrs05UNZOeoXBN9iIudJkBDFHe35OqVgSESOexqXsep3pEsjGA==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "aa39ba071d6785883fbadcaddcb81b6d3dfb7a90"], ["updated_at", "2020-01-20 16:54:48.296699"], ["id", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[35m (34.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+Completed 500 Internal Server Error in 1260ms (ActiveRecord: 39.1ms | Allocations: 67780)
+
+
+  
+NoMethodError (undefined method `current_user=' for #<SessionsController:0x000055665a9dd3c8>
+Did you mean?  current_user):
+  
+app/helpers/sessions_helper.rb:8:in `sign_in'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-01-20 10:56:42 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t+cIs4YAxCOOMZ1mHvykXTeT0A9B6SpIHB1oTrs05UNZOeoXBN9iIudJkBDFHe35OqVgSESOexqXsep3pEsjGA==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "a5f3d011553e9a48aa94667392b7509a1f7fdedb"], ["updated_at", "2020-01-20 16:56:43.799270"], ["id", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[35m (27.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+Completed 500 Internal Server Error in 1253ms (ActiveRecord: 32.3ms | Allocations: 67782)
+
+
+  
+NoMethodError (undefined method `current_user=' for #<SessionsController:0x00007fc394d82048>
+Did you mean?  current_user):
+  
+app/helpers/sessions_helper.rb:8:in `sign_in'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-01-20 10:57:13 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t+cIs4YAxCOOMZ1mHvykXTeT0A9B6SpIHB1oTrs05UNZOeoXBN9iIudJkBDFHe35OqVgSESOexqXsep3pEsjGA==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "450e7a5379b551440ed021ef76f711cd50b137a9"], ["updated_at", "2020-01-20 16:57:15.035750"], ["id", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[35m (38.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 794ms (ActiveRecord: 43.6ms | Allocations: 9578)
+
+
+Started GET "/users/1" for ::1 at 2020-01-20 10:57:15 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 15)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 46.3ms | Allocations: 7755)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1423.6ms | Allocations: 172449)
+Completed 500 Internal Server Error in 1506ms (ActiveRecord: 6.1ms | Allocations: 184569)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `remember_token' for #<#<Class:0x00007fc394bf6030>:0x00007fc394c03cd0>):
+    4:     <nav>
+    5:       <ul class="nav navbar-nav navbar-right ">
+    6:         <li><%= link_to "Home", root_path %></li>
+    7:         <% if logged_in? %>
+    8:           <li><%= link_to "Users", '#' %></li>
+    9:           <li class="dropdown">
+   10:             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  
+app/helpers/sessions_helper.rb:12:in `current_user'
+app/helpers/sessions_helper.rb:16:in `logged_in?'
+app/views/layouts/_header.html.erb:7
+app/views/layouts/application.html.erb:14
+Started GET "/login" for ::1 at 2020-01-20 10:57:59 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 443)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 90.7ms | Allocations: 7713)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 55.1ms | Allocations: 5992)
+Completed 200 OK in 170ms (Views: 158.2ms | ActiveRecord: 10.0ms | Allocations: 17929)
+
+
+Started POST "/login" for ::1 at 2020-01-20 10:58:06 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"597Pf+KTQOIh71zCmKWr466hCxGpE92F3BZoZ+xrpoIJAC3bYEzm40iXUbRDROJHo5e7Vqx0jNdXuupe8xRg2Q==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "9efcb3ff0d3f3bf6bf4af30f7401003619acac5f"], ["updated_at", "2020-01-20 16:58:07.627757"], ["id", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+Completed 500 Internal Server Error in 1405ms (ActiveRecord: 17.7ms | Allocations: 62708)
+
+
+  
+NoMethodError (undefined method `current_user=' for #<SessionsController:0x000055665af30370>
+Did you mean?  current_user):
+  
+app/helpers/sessions_helper.rb:8:in `sign_in'
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2020-01-20 10:58:37 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"597Pf+KTQOIh71zCmKWr466hCxGpE92F3BZoZ+xrpoIJAC3bYEzm40iXUbRDROJHo5e7Vqx0jNdXuupe8xRg2Q==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "a6e104675cc41bad36b270b40378a37b349ba88a"], ["updated_at", "2020-01-20 16:58:38.435288"], ["id", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[35m (32.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 911ms (ActiveRecord: 40.8ms | Allocations: 9556)
+
+
+Started GET "/users/1" for ::1 at 2020-01-20 10:58:38 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 15)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 56.7ms | Allocations: 7908)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 12.6ms | Allocations: 837)
+Completed 200 OK in 101ms (Views: 89.0ms | ActiveRecord: 1.5ms | Allocations: 13122)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 11:01:26 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vLetAo8SV9QL5oZQEneHQ0nQoIuBgyiMMYY4EFECKCpSaU+mDc3x1WKeiybJls7nROYQzITked66KropTn3ucQ=="}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[36mUser Update (6.7ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", nil], ["updated_at", "2020-01-20 17:01:26.945691"], ["id", 1]]
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[35m (69.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 163ms (ActiveRecord: 81.8ms | Allocations: 9362)
+
+
+Started GET "/" for ::1 at 2020-01-20 11:01:27 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1066)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 63.6ms | Allocations: 7752)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 82)
+Completed 200 OK in 145ms (Views: 139.5ms | ActiveRecord: 0.0ms | Allocations: 12624)
+
+
+Started GET "/login" for ::1 at 2020-01-20 11:01:36 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 442)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 124.9ms | Allocations: 7751)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 81)
+Completed 200 OK in 192ms (Views: 190.0ms | ActiveRecord: 0.0ms | Allocations: 11983)
+
+
+Started POST "/login" for ::1 at 2020-01-20 11:01:44 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Sy7OBUzSFd/g3pA72t5bSzAx9p4eSj/MxukoVgsugDyom7f5w3ykBPRRnmZccfES+9vnvsBwH2O/mttZ+KsZBw==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[36mUser Update (3.8ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "b9588af0b246aa7590779a504e49f5dfdbf727fd"], ["updated_at", "2020-01-20 17:01:45.824003"], ["id", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+  [1m[35m (34.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/helpers/sessions_helper.rb:7:in `sign_in'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1057ms (ActiveRecord: 40.0ms | Allocations: 4380)
+
+
+Started GET "/users/1" for ::1 at 2020-01-20 11:01:45 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 13)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 165.9ms | Allocations: 7752)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.9ms | Allocations: 729)
+Completed 200 OK in 238ms (Views: 216.5ms | ActiveRecord: 1.0ms | Allocations: 12698)
+
+
+Started GET "/" for ::1 at 2020-01-20 11:01:53 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 21.8ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 61.4ms | Allocations: 7750)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 716)
+Completed 200 OK in 152ms (Views: 149.5ms | ActiveRecord: 0.4ms | Allocations: 13056)
+
+
+Started GET "/" for ::1 at 2020-01-20 11:03:39 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 118.3ms | Allocations: 3226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 536.9ms | Allocations: 21698)
+  Rendered layouts/_shim.html.erb (Duration: 7.6ms | Allocations: 85)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 29.6ms | Allocations: 1497)
+Completed 200 OK in 906ms (Views: 831.7ms | ActiveRecord: 2.4ms | Allocations: 37903)
+
+
+Started GET "/users/1" for ::1 at 2020-01-20 11:03:48 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 47.6ms | Allocations: 7826)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 23.2ms | Allocations: 734)
+Completed 200 OK in 108ms (Views: 88.4ms | ActiveRecord: 5.3ms | Allocations: 13067)
+
+
+Started DELETE "/logout" for ::1 at 2020-01-20 11:03:53 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MDrG2wQbAUnvJdKx5i8zzC+sVKp+e6AUVvWApi87tpve5CR/hsSnSIZd38c9znpoIprk7Xsc8UbdWQKfMERwwA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:12:in `current_user'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", nil], ["updated_at", "2020-01-20 17:03:53.360816"], ["id", 1]]
+  ↳ app/models/user.rb:23:in `forget'
+  [1m[35m (84.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23:in `forget'
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms (ActiveRecord: 87.9ms | Allocations: 4314)
+
+
+Started GET "/" for ::1 at 2020-01-20 11:03:53 -0600
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 29.1ms | Allocations: 7822)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 79)
+Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 0.0ms | Allocations: 12652)
+
+
+Started GET "/" for ::1 at 2020-01-20 11:04:35 -0600
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 22.1ms | Allocations: 3226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 191.5ms | Allocations: 21698)
+  Rendered layouts/_shim.html.erb (Duration: 0.9ms | Allocations: 85)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 378)
+Completed 200 OK in 419ms (Views: 356.7ms | ActiveRecord: 4.6ms | Allocations: 36774)
+
+
+Started GET "/login" for ::1 at 2020-01-20 11:04:40 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 40.0ms | Allocations: 7784)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 5.9ms | Allocations: 81)
+Completed 200 OK in 110ms (Views: 103.5ms | ActiveRecord: 0.0ms | Allocations: 12698)
+
+
+Started GET "/login" for ::1 at 2020-01-20 11:04:42 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 61.2ms | Allocations: 7822)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 78)
+Completed 200 OK in 92ms (Views: 90.1ms | ActiveRecord: 0.0ms | Allocations: 11911)
+
+

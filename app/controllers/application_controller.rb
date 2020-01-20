@@ -1,14 +1,17 @@
 class ApplicationController < ActionController::Base
-  include SessionsHelper
+   include SessionsHelper
     protect_from_forgery with: :exception
 
-    def sign_in(user)
-      session[:user_id] = user.id
-      # remember_token = User.new_token
-      # cookies.permanent[:remember_token] = remember_token
-      # user.update_attribute(:remember_token, User.digest(remember_token))
-    
+    def forgett(user)
+        user.forget
+        cookies.delete(:user_id)
+        cookies.delete(:remember_token)
     end
 
+    def log_out
+        forgett(current_user)
+        session.delete(:user_id)
+        @current_user = nil
+    end
     
 end

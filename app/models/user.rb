@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  
+
   before_create :remember_t
   has_secure_password
 
@@ -12,12 +12,20 @@ class User < ApplicationRecord
     def digest(token)
       Digest::SHA1.hexdigest(token.to_s)
     end
-    
+
+    def authenticated?(remember_token)
+      BCrypt::Password.new(remember_token).is_password?(remember_token)
+    end
+
+  end
+
+  def forget
+    update_attribute(:remember_token, nil)
   end
 
   private
 
-  def remember_t
+  def remember_t(remember_token)
     self.remember_token = User.digest(User.new_token)
   end
 
