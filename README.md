@@ -1,24 +1,38 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
 
-Things you may want to cover:
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-* Ruby version
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-* System dependencies
+In this project we built an app that allows create new users and login member users for commenting on the app and only the members  can see the name of the author's comment.
 
-* Configuration
+The app can remember the user session using cookies.
 
-* Database creation
 
-* Database initialization
+Link for project specifications: [Odin-Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
 
-* How to run the test suite
+### Built With
 
-* Services (job queues, cache servers, search engines, etc.)
+*   Ruby on Rails
+*   Rubocop
 
-* Deployment instructions
+<!-- CONTACT -->
+## Contact
 
-* ...
+Melissa Castorena - mcastorena0316@gmail.com
+
+Guadalupe Rangel- kanemekanik@gmail.com
+
+Project Link: [Members Only](https://github.com/Luzaks/re-former)
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [Microverse](https://www.microverse.org/)
+
