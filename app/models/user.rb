@@ -17,10 +17,6 @@ class User < ApplicationRecord
     end
   end
 
-  def forget
-    update_attribute(:remember_token, nil)
-  end
-
   private
 
   def remember_t
