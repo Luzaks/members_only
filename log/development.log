@@ -13461,3 +13461,138 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.4ms | Allocations: 12309)
 
 
+Started GET "/" for 127.0.0.1 at 2020-01-22 09:51:10 -0600
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (5.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 57.2ms | Allocations: 4661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 459.9ms | Allocations: 31683)
+  Rendered layouts/_shim.html.erb (Duration: 1.2ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 267)
+Completed 200 OK in 664ms (Views: 596.3ms | ActiveRecord: 15.5ms | Allocations: 45722)
+
+
+Started GET "/login" for 127.0.0.1 at 2020-01-22 09:51:16 -0600
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 59.0ms | Allocations: 2248)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 34.8ms | Allocations: 7882)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 90)
+Completed 200 OK in 137ms (Views: 133.7ms | ActiveRecord: 0.0ms | Allocations: 14422)
+
+
+Started POST "/login" for 127.0.0.1 at 2020-01-22 09:51:28 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"88Yh9EiLrUC4U2RLi5DUsqB9nC+KLMWiFXmrY+92+hrmlSUHVtz43PzOzFCewsOSheSqFoeM5u6KEZBCTCYlvg==", "session"=>{"email"=>"foo@bar.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:8:in `sign_in'
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_token", "0d12b5a8db0515e0a037f48cbccb344a59caaf55"], ["updated_at", "2020-01-22 15:51:29.525396"], ["id", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `sign_in'
+  [1m[35m (28.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:8:in `sign_in'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 800ms (ActiveRecord: 33.4ms | Allocations: 10552)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-01-22 09:51:29 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 149)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 52.0ms | Allocations: 7884)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 104)
+Completed 200 OK in 83ms (Views: 72.8ms | ActiveRecord: 2.9ms | Allocations: 12942)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-22 09:51:34 -0600
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13:in `current_user'
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:10
+  Rendered posts/index.html.erb within layouts/application (Duration: 309.7ms | Allocations: 12990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 39.8ms | Allocations: 7796)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 103)
+Completed 200 OK in 384ms (Views: 367.5ms | ActiveRecord: 4.3ms | Allocations: 25131)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2020-01-22 09:51:41 -0600
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3M5c6hFV1W/hajK1UZmt0VUKRpnau2HjyIu1d2kU0ujJnVgZDwKA86X3mq5Ey7rxcJNwoNcbQq9X445WykQNTA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.0ms | Allocations: 419)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-22 09:51:41 -0600
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (25.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 799)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 60.7ms | Allocations: 7881)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 97)
+Completed 200 OK in 108ms (Views: 80.4ms | ActiveRecord: 25.3ms | Allocations: 12388)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-22 09:53:18 -0600
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_rails_default.html.erb (Duration: 31.3ms | Allocations: 8020)
+  Rendered layouts/_shim.html.erb (Duration: 3.1ms | Allocations: 82)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 187)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 0.4ms | Allocations: 14232)
+
+
